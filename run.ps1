@@ -73,7 +73,7 @@ if ($SharedState.Found) {
 
     Start-Sleep -Seconds 1
     
-    adb -s "$($AndroidIP):$MatchedPort" shell sh /storage/emulated/0/Android/data/moe.shizuku.privileged.api/start.sh
+    .\invoked.ps1 -DeviceIP $AndroidIP -DevicePort $MatchedPort
 }
 else {
     Write-Host "Failed: Target port not discovered on $AndroidIP." -ForegroundColor Red
